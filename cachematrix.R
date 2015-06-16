@@ -18,7 +18,7 @@ makeCacheMatrix <- function(x=matrix()) {
           getinv = getinv)
 }
 
-## CashSolve get us the inverse of a x.
+## CashSolve get us the inverse of x.
 ## Returns the cashed inverse of x if exists. 
 ## Otherwise calculate the inverse, cashe and return it .
 cacheSolve <- function(x, ...) {
