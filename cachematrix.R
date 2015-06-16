@@ -1,7 +1,7 @@
-## These functions cache the inverse of a matrix. 
+## These functions cache a matrix and its inverse. 
 
 ## makeCacheMatrix creates a vector of functions (set,get,setinv,getinv)
-## enabling us to cashe and get the values of a vector and its inverse
+## enabling us to cashe and get the values of a matrix and its inverse
 makeCacheMatrix <- function(x=matrix()) {
      inv <- NULL
      set <- function(y) {
@@ -18,8 +18,9 @@ makeCacheMatrix <- function(x=matrix()) {
           getinv = getinv)
 }
 
-## CashSolve get us the inverse of a matrix.
-## Returns the cashed inverse if exists. Otherwise calculate the inverse and cashe it.
+## CashSolve get us the inverse of a x.
+## Returns the cashed inverse of x if exists. 
+## Otherwise calculate the inverse, cashe and return it .
 cacheSolve <- function(x, ...) {
      inv<-x$getinv()
      if(!is.null(inv)) {
